@@ -1,0 +1,26 @@
+{
+  "name": "s3sign",
+  "version": "0.0.1",
+  "description": "URL signing utility for Amazon S3 service",
+  "main": "s3sign.js",
+  "dependencies": {
+    "eyes": "~0.1.8",
+    "nconf": "~0.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {"s3sign", "./bin/s3sign"},
+  "repository": "",
+  "keywords": [
+    "AWS",
+    "Amazon",
+    "S3",
+    "bucket",
+    "signed",
+    "urls"
+  ],
+  "author": "Pierre Gilot",
+  "license": "BSD"
+}
