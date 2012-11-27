@@ -14,6 +14,18 @@
 
   cfg.argv().env();
 
+  if (cfg.get("help")) {
+    console.log("");
+    console.log("usage: s3sign --bucket BUCKET_NAME        : the name of your bucket");
+    console.log("              --file FILE_NAME            : full pathname of your file");
+    console.log("             [--duration TIME_IN_MINUTES] : expiration in minutes (defaults to 5)");
+    console.log("             [--accessKeyId <ACCESS_KEY>] : your access key (defaults to AWS_ACCESS_KEY env. var.");
+    console.log("             [--secretAccessKey <SECRET>] : your secret key (defaults to AWS_SECRET_KEY env. var.");
+    console.log("             [--verb GET|POST]            : HTTP verb (defaults to GET");
+    console.log("");
+    process.exit(0);
+  }
+
   accessKeyId = (_ref = (_ref1 = cfg.get("accessKeyId")) != null ? _ref1 : cfg.get("AWS_ACCESS_KEY")) != null ? _ref : "BAD_KEY";
 
   secretAccessKey = (_ref2 = (_ref3 = cfg.get("secretAccessKey")) != null ? _ref3 : cfg.get("AWS_SECRET_KEY")) != null ? _ref2 : "BAD_SECRET_KEY";
